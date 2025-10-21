@@ -19,7 +19,7 @@ create table Funcionario(
     Primeiro_nome varchar(45) not null,
     Ultimo_nome varchar(45) not null,
     Celular varchar(45) not null,
-    Tipo_funcionario ENUM("Gerente","Funcionario") not null,
+    Tipo_funcionario ENUM("Gerente","Atendente") not null,
     idGerente int,
     foreign key (idGerente) references Funcionario (idFuncionario)
 );
