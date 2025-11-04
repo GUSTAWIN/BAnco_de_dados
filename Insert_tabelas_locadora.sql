@@ -1,3 +1,4 @@
+
 use AluguelJogos;
 /*INSERIR*/
 
@@ -43,7 +44,7 @@ insert into Funcionario (idFuncionario, Primeiro_nome, Ultimo_nome, Celular, Tip
  
 Insert into Aluguel_Jogo (idAluguel, idJogo) values
  (1, 1),
- (2, 1),
+ (2, 2),
  (3, 2),
  (4, 5),
  (5, 4),

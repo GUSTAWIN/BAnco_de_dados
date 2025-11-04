@@ -44,8 +44,8 @@ create table Aluguel(
 );
 
 create table Aluguel_Jogo(
-	idAluguel int not null,
-    foreign key (idAluguel) references Aluguel (idAluguel),
+	idAluguel int not null ,
+    foreign key (idAluguel) references Aluguel (idAluguel)  on delete cascade,
     idJogo int not null,
-    foreign key (idJogo) references Jogo (idJogo)
+    foreign key (idJogo) references Jogo (idJogo) on delete cascade
 );
