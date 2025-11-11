@@ -50,3 +50,6 @@ Order by j.Qtd_copias DESC
 limit 1;
 
 /*Listar o maior valor total de um aluguel (levar em consideração o valor da diária, o período e o número de jogadores adultos), apresentando os dados do aluguel e o valor total*/
+select *, max(temp.valor_total) as Valor_Maximo from (select a.*,j.*,( DATEDIFF(a.Data_devolucao, Data_retirada) * j.V_aluguel_dia) as valor_total
+from Aluguel a join Aluguel_Jogo aj join Jogo j
+where a.idAluguel = aj.idAluguel and aj.idJogo = j.idJogo) as temp;
